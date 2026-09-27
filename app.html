@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Form</title>
+</head>
+<body>
+
+    <style>
+     body{
+        font-family: sans-serif;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+       
+     }
+
+     body::-webkit-scrollbar{
+        display: none;
+     }
+     
+     .table{
+        height: auto;
+        width:500px;
+        border: 1px solid black;
+     }
+
+
+     .tableCol{
+        border: none;
+        padding-left: 8px;
+    
+     }
+     .col{
+        border:none;
+     }
+    
+     .tableCol input{
+        width:250px;
+        padding: 5px 4px;
+        border-radius: 5px;
+       border: 1px solid gray;
+
+     }
+     
+     .header{
+        height: 40px;
+        width:45%;
+       color: white;
+       padding: 5px;
+       
+     }
+     span{
+        color: red;
+
+     }
+     .option{
+        height: 30px;
+        width: 250px;
+     }
+     
+     table {
+    border-collapse: collapse;
+}
+
+td:first-child {
+    border-right: 1px solid #999;
+    padding-right: 10px;
+    
+}
+#check{
+    padding-left: 8px;
+   
+}
+.td label{
+    margin-top: 20px;
+}
+.btn{
+    padding: 8px 12px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border:none;
+    background-color: orangered;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+ .btnDiv{
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    
+ }
+    </style>     
+
+   
+ <div class="container">
+    <form>
+         <table border="2" 
+    cellPadding="2"  cellSpacing="10" width="600px" height="100px">
+    <tr>
+   <th bgcolor="green" align="right" class="header" >Get started with Monster</th>
+    
+    </tr>
+    
+
+    <tr>     
+       
+       
+       <td class="col" align="right">
+         <label><span>*</span> Email Adress:</label>
+       </td>
+       <td class="tableCol">
+        <input type="email" id="textInput" placeholder="Enter Email" />
+       </td>
+      
+    </tr>
+     <tr>     
+       
+       <td class="tableRow col" align="right">
+         <label><span>*</span> First Name</label>
+       </td>
+       <td class="tableCol">
+        <input type="text" id="textInput" 
+        autocomplete="username" required />
+       </td>
+      
+</tr>
+
+<tr>
+
+    <td class="col" align="right">
+        <label><span>*</span> Last Name:</label>
+    </td>
+    <td class="tableCol">
+        <input type="text" id="textInput"
+         autocomplete="username" placeholder="Enter last name" required />
+    </td>
+</tr>
+
+<tr>
+
+    <td class="col" align="right">
+        <label><span>*</span> Desired Name:</label>
+    </td>
+    <td class="tableCol">
+        <input type="text" id="textInput"
+         autocomplete="username" placeholder="Enter custom name" required />
+    </td>
+</tr>
+
+<tr>
+
+    <td class="col" align="right">
+        <label><span>*</span> Choose a password:</label>
+    </td>
+    <td class="tableCol">
+        <input type="password" id="password" 
+        autocomplete="new-password" required />
+    </td>
+</tr>
+
+<tr>
+
+    <td class="col" align="right">
+        <label><span>*</span> Re-enter password:</label>
+    </td>
+    <td class="tableCol">
+        <input type="password" id="rePassword"
+        autocomplete="new-password" placeholder="Enter last name" required />
+    </td>
+</tr>
+</table>
+
+<!-- table2 -->
+<table border="2" 
+    cellPadding="2" cellSpacing="6 " width="600px" height="100px">
+  
+    <tr>
+   <th bgcolor="green" align="right" class="header" >Personal Details</th>
+    </tr>
+        
+       <tr>
+        <td class="col" align="right"><span>*</span>  Current Location:</td>
+
+        <td class="tableCol">
+            <select class="option">
+                <option>
+                    -select
+                </option>
+                <option value="chandrapur">
+                    chandrapur
+                </option>
+            </select>
+        </td>
+
+       </tr>
+        <tr>
+            <td class="col"></td>
+        <td class="tableCol" >
+            <input type="text" id="textInput" />
+        </td>
+       </tr>
+
+       <tr>
+        <td class="col" align="right">
+            <p>Mobile Number:</p>
+        </td>
+
+        <td class="tableCol">
+            <input type="tel" id="textInput" placeholder="+91" required/>
+        </td>
+       </tr>
+
+        <tr>
+        <td class="col" align="right">
+            <p>Phone Number:</p>
+        </td>
+
+        <td class="tableCol">
+            <input type="tel" id="textInput" placeholder="+91" required/>
+        </td>
+       </tr>
+     
+     <tr>
+        <td class="col" align="right">
+            <p>Preferred job location:</p>
+        </td>
+
+        <td class="tableCol">
+           <select class="option">
+            <option value="-select">-select</option>
+            <option value="Anywhere">Anywhere</option>
+            <option value="Ahemdabad">Ahemdabad</option>
+            <option value="Banglore">Banglore</option>
+           </select>
+        </td>
+     </tr>  
+     <tr>
+        <td class="col" align="right">
+        <p><span>*</span> Nationality:</p>
+        </td>
+
+        <td class="tableCol">
+            <select class="option">
+                <option value="select">-Select-</option>
+                <option value="Indian">Indian</option>
+            </select>
+        </td>
+     </tr>
+
+     <tr>
+        <td class="col" align="right">
+            <p><span>*</span> Gender:</p>
+        </td>
+
+        <td class="col" id="check">
+            <label>
+                <input type="checkbox" id="checkbox" />
+                Male</label>
+
+                <label>
+                <input type="checkbox" id="checkbox" />
+                Female</label>
+        </td>
+     </tr>
+     
+     
+
+
+</table>
+
+<!-- table 3 -->
+ <table border="2" 
+    cellPadding="2"  cellSpacing="10" width="600px" height="100px" >
+   <tr>
+   <th bgcolor="green" align="right" class="header" >Personal Details</th>
+    </tr>
+
+    <tr>
+        <td class="col" align="right">
+            <p>Total Experience:</p>
+        </td>
+
+        <td class="tableCol">
+            <label>
+                <select>
+                    <option value="select">select</option>
+                </select>
+                Years
+            </label>
+
+            <label>
+                <select>
+                    <option value="select">select</option>
+                </select>
+                Months
+            </label>
+        </td>
+    </tr>
+    <tr>
+        <td class="col" align="right">
+            <p><span>*</span> Current/ preferred
+            industry:</p>
+        </td>
+
+        <td class="tableCol">
+        <select class="option">
+            <option value="-Select-">-select-</option>
+            <option value="Any">Any</option>
+            <option value="Automative">Automative/Anallaries</option>
+            <option value="Banking">Banking/Financial service</option>
+            <option value="bio Technology">Bio Technology</option>
+            <option value="select">Chemical/plastic/rubber</option>
+            <option value="Construction">Construction</option>
+            <option value="Consumer foods">Consumer foods/ FMCG</option>
+        </select>
+        </td>
+     </tr>
+
+       <tr>
+        <td class="col" align="right">
+            <p><span>*</span> Function:</p>
+        </td>
+
+        <td class="tableCol">
+        <select class="option">
+            <option value="-Select-">-select-</option>
+            <option value="Any">Any</option>
+            <option value="Admin">Admin/secreterial</option>
+            <option value="customer service">customer service/call center</option>
+            <option value="Finance">Finance & Accounts</option>
+            <option value="Human resources">Human resources</option>
+            <option value="It">It</option>
+            <option value="legal">Legal</option>
+            <option value="Marketing">Marketing & Communication</option>
+            <option value="purchase">Purchase/Logistics/supply chain</option>
+            <option value="sales">sales/ Business developement</option>
+        </select>
+        </td>
+     </tr>
+     <tr>
+        <td class="col" align="right">
+            <p>Key skills:</p>
+
+        </td>
+        <td class="tableCol">
+            <input type="text" id="textInput" placeholder="Enter skills" />
+        </td>
+     </tr>
+
+ </table>
+
+ <!-- table 4 -->
+<table  border="2" 
+    cellPadding="2"  cellSpacing="10" width="600px" height="100px" >
+  <tr>
+    
+  <th bgcolor="green" align="right" class="header" >Email Subscription</th>
+   
+   
+    <td class="col">
+        Email you would like to recieve
+    </td>
+    </tr>
+
+    <tr>
+        <td class="col"></td>
+
+        <td style="border: none;"  class="td">
+            <label>
+              <input type="checkbox" id="checkbox">
+              Monster Products & newsletter
+            </label>
+        </td>
+    </tr>
+
+    <tr>
+
+        <td class="col"></td>
+       <td style="border: none;" class="td">
+         <label>
+              <input type="checkbox" id="checkbox">
+              Offers & promotion for leading companies
+            </label>
+       </td>
+    </tr>
+
+    <tr>
+        <td class="col"></td>
+
+        <td style="border:none;" class="td">
+                <label >
+              <input type="checkbox" id="checkbox">
+             Recieve matching jobs through sms
+            </label>
+
+        </td>
+    </tr>
+</table> 
+
+  <div class="btnDiv">
+   <button class="btn"  type="submit">Submit</button>
+    </div>
+ 
+    </form>
+   
+  
+ 
+
+
+ </div>
+
+</body>
+</html>
