@@ -10,7 +10,7 @@
     <style>
      body{
         font-family: sans-serif;
-        height: 100vh;
+        height:100vh;
         display: flex;
         justify-content: center;
        
@@ -18,7 +18,13 @@
 
      body::-webkit-scrollbar{
         display: none;
+        
      }
+     .container{
+        height: auto;
+
+     }
+
      
      .table{
         height: auto;
@@ -49,6 +55,8 @@
         width:45%;
        color: white;
        padding: 5px;
+       background-color: rgb(87, 140, 8);
+       font-size: 18px;
        
      }
      span{
@@ -62,6 +70,8 @@
      
      table {
     border-collapse: collapse;
+    border-color: rgb(225, 219, 219);
+    
 }
 
 td:first-child {
@@ -95,15 +105,57 @@ td:first-child {
     justify-content: flex-end;
     
  }
+ .heading{
+    height:50px;
+    width: 100%;
+    display: flex;
+    justify-content:flex-end;
+    align-items:flex-end;
+ }
+ .heading h4{
+    margin: 0;
+ }
+
+ 
+.parentContent{
+    max-height: 1650px;
+    min-height:1600px;
+    width: 900px; 
+    background-color: rgb(228, 225, 225);
+    display: flex;
+    justify-content: center;
+    align-items:start;
+   
+}
+
+#table1{
+    border-top: 1px solid rgb(87, 140, 8);
+}
+#dropDown{
+     height:auto;
+    width:60%;
+    padding: 5px;
+    font-size: 15px;
+   
+}
+#dropDown option{
+    font-weight:bold;
+}
+
     </style>     
 
-   
- <div class="container">
+   <div class="parentContent">
+<div class="container">
+    <div class="heading">
+        <h4> 
+              <span>*</span> Require fields
+        </h>
+    </div>
     <form>
-         <table border="2" 
-    cellPadding="2"  cellSpacing="10" width="600px" height="100px">
+         <table border="2" id="table1"
+    cellPadding="2"  cellSpacing="10" width="830px" height="320px" style="background-color: white;">
     <tr>
-   <th bgcolor="green" align="right" class="header" >Get started with Monster</th>
+   <th  align="right" class="header" >Get started with Monster</th>
     
     </tr>
     
@@ -178,7 +230,7 @@ td:first-child {
 
 <!-- table2 -->
 <table border="2" 
-    cellPadding="2" cellSpacing="6 " width="600px" height="100px">
+    cellPadding="2" cellSpacing="6 " width="830px" height="auto" style="background-color: white;">
   
     <tr>
    <th bgcolor="green" align="right" class="header" >Personal Details</th>
@@ -225,18 +277,18 @@ td:first-child {
             <input type="tel" id="textInput" placeholder="+91" required/>
         </td>
        </tr>
-     
+   
      <tr>
         <td class="col" align="right">
             <p>Preferred job location:</p>
         </td>
 
         <td class="tableCol">
-           <select class="option">
-            <option value="-select">-select</option>
-            <option value="Anywhere">Anywhere</option>
-            <option value="Ahemdabad">Ahemdabad</option>
-            <option value="Banglore">Banglore</option>
+           <select class="option" size="4" id="dropDown" >
+            <option value="1">-select</option>
+            <option value="2">Anywhere</option>
+            <option value="3">Ahemdabad</option>
+            <option value="4">Banglore</option>
            </select>
         </td>
      </tr>  
@@ -276,9 +328,9 @@ td:first-child {
 
 <!-- table 3 -->
  <table border="2" 
-    cellPadding="2"  cellSpacing="10" width="600px" height="100px" >
+    cellPadding="2"  cellSpacing="10" width="830px" height="auto" style="background-color: white;" >
    <tr>
-   <th bgcolor="green" align="right" class="header" >Personal Details</th>
+   <th bgcolor="green" align="right" class="header" >Professional Details</th>
     </tr>
 
     <tr>
@@ -309,7 +361,7 @@ td:first-child {
         </td>
 
         <td class="tableCol">
-        <select class="option">
+        <select class="option" size="8" id="dropDown" >
             <option value="-Select-">-select-</option>
             <option value="Any">Any</option>
             <option value="Automative">Automative/Anallaries</option>
@@ -328,7 +380,7 @@ td:first-child {
         </td>
 
         <td class="tableCol">
-        <select class="option">
+        <select class="option" size="11" id="dropDown" >
             <option value="-Select-">-select-</option>
             <option value="Any">Any</option>
             <option value="Admin">Admin/secreterial</option>
@@ -357,7 +409,7 @@ td:first-child {
 
  <!-- table 4 -->
 <table  border="2" 
-    cellPadding="2"  cellSpacing="10" width="600px" height="100px" >
+    cellPadding="2"  cellSpacing="10" width="830px" height="180px" style="background-color: white;" >
   <tr>
     
   <th bgcolor="green" align="right" class="header" >Email Subscription</th>
@@ -371,10 +423,10 @@ td:first-child {
     <tr>
         <td class="col"></td>
 
-        <td style="border: none;"  class="td">
+        <td style="border: none; padding: 10px;"  class="td">
             <label>
               <input type="checkbox" id="checkbox">
-              Monster Products & newsletter
+            Monster Products & newsletter
             </label>
         </td>
     </tr>
@@ -382,7 +434,7 @@ td:first-child {
     <tr>
 
         <td class="col"></td>
-       <td style="border: none;" class="td">
+       <td style="border: none; padding: 10px" class="td">
          <label>
               <input type="checkbox" id="checkbox">
               Offers & promotion for leading companies
@@ -393,7 +445,7 @@ td:first-child {
     <tr>
         <td class="col"></td>
 
-        <td style="border:none;" class="td">
+        <td style="border:none; padding: 10px;" class="td">
                 <label >
               <input type="checkbox" id="checkbox">
              Recieve matching jobs through sms
@@ -406,8 +458,9 @@ td:first-child {
   <div class="btnDiv">
    <button class="btn"  type="submit">Submit</button>
     </div>
- 
     </form>
+ 
+   
    
   
  
@@ -415,5 +468,7 @@ td:first-child {
 
  </div>
 
+   </div>
+ 
 </body>
 </html>
